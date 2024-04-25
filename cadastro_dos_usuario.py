@@ -1,7 +1,7 @@
 def realizar_cadastro_usuario():
     registro_usuario = {}
     nome = input("Digite seu nome: ") .upper() .strip()
-    telefone = str(input("INSIRA SEU TELEFONE: "))
+    telefone = str(input("Insira seu número telefone: "))
     email = input("insira se email: ") .lower() .strip()
     senha = ""
     while True:
