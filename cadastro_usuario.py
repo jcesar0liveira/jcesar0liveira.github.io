@@ -5,9 +5,9 @@ def realizar_cadastro_usuario():
     email = input("insira se email: ") .lower() .strip()
     senha = ""
     while True:
-        senha = input("insira a senha(miinimo 6 caracteres):")
-        if len(senha) < 6:
-            print("a senha precisa ter no minimo 6 caracteres!")
+        senha = input("insira a senha:")
+        if len(senha) < 5:
+            print("a senha precisa ter no minimo 5 caracteres!")
             continue
         else:
             break
