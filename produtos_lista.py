@@ -46,7 +46,7 @@ def menu_principal():
             1- Regitrar Produto
             2- Editar produto
             3- Exibir lista de produtos
-            4- Exibir produtos
+            4- Excluir produtos
             5- Sair      
         """)
         try:
