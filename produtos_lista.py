@@ -12,7 +12,7 @@ def selecionar_produto_para_edicao(lista_produtos):
     print("LISTA DE PRODUTOS")
     for produto in lista_produtos:
         print(f"{produto}")
-        id_produto = int(input("digite o id do produto que deseja editar: "))
+        id_produto = int(input("digite o id do produto que deseja editar"))
         for produto in lista_produtos:
             if produto["ID"] == id_produto:
                 return produto
@@ -47,7 +47,7 @@ def menu_principal():
             2- Editar produto
             3- Exibir lista de produtos
             4- Exibir produtos
-            X- Sair      
+            5- Sair      
         """)
         try:
             opcao = input("Digite a opção desejada: ").upper()
@@ -57,10 +57,10 @@ def menu_principal():
                 continue
             elif opcao == "2":
                 produto_selecionado_para_edicao = selecionar_produto_para_edicao(lista_produtos)
-                detalhe_a_editar = input("digite o detalhe que deseja editar: ") .capitalize().strip()
+                detalhe_a_editar = input("digite o detalhe que deseja editar:") .capitalize().strip()
                 novo_valor = input(f"digite o novo{detalhe_a_editar}: ")
                 if  editar_detalhes_produto(produto_selecionado_para_edicao, detalhe_a_editar, novo_valor):
-                    print("detalhe do produto editado")
+                    print("detalhe do produto editado:")
                 continue
             elif opcao == "3":
                 exibir_lista_de_produto()
@@ -69,12 +69,12 @@ def menu_principal():
                 id_produto_para_excluir = int(input("Digite o id do produto que deseja excluir: "))
                 excluir_produto_da_lista(lista_produtos, id_produto_para_excluir)
                 continue
-            elif opcao == "X":
+            elif opcao == "5":
                 break
             else:
                 print("por favor, escolha uma opção que seja válida")
                 continue
         except ValueError:
-            print("Saindo...")
+            print("Saindo em 3, 2, 1...")
             break  
            
