@@ -12,7 +12,7 @@ def selecionar_produto_para_edicao(lista_produtos):
     print("LISTA DE PRODUTOS")
     for produto in lista_produtos:
         print(f"{produto}")
-        id_produto = int(input("digite o id do produto que deseja editar"))
+        id_produto = int(input("digite o id do produto que deseja editar: "))
         for produto in lista_produtos:
             if produto["ID"] == id_produto:
                 return produto
@@ -50,14 +50,14 @@ def menu_principal():
             X- Sair      
         """)
         try:
-            opcao = input("Digite a opção desejada").upper()
+            opcao = input("Digite a opção desejada: ").upper()
             if opcao == "1":
                 _ = registrar_produto()
                 print("produto registrado com sucesso!")
                 continue
             elif opcao == "2":
                 produto_selecionado_para_edicao = selecionar_produto_para_edicao(lista_produtos)
-                detalhe_a_editar = input("digite o detalhe que deseja editar") .capitalize().strip()
+                detalhe_a_editar = input("digite o detalhe que deseja editar: ") .capitalize().strip()
                 novo_valor = input(f"digite o novo{detalhe_a_editar}: ")
                 if  editar_detalhes_produto(produto_selecionado_para_edicao, detalhe_a_editar, novo_valor):
                     print("detalhe do produto editado")
