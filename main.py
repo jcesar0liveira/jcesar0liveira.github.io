@@ -1,11 +1,11 @@
-from usuarios.cadastro_usuario import realizar_cadastro_usuario, validar_credenciais
-from produtos.listagem_produtos import menu_principal
+from usuarios.cadastro_dos_usuarios import realizar_cadastro_usuario, validar_credenciais
+from produtos.produtos_lista import menu_principal
 
 while True:
     print("""BEM-VINDO 
             1- CADASTRAR
             2- LOGIN
-            X- SAIR""")
+            3- SAIR""")
     try:
         opcao = input ("DIGITE A OPÇÃO DESEJADA:") .upper()
         if opcao == "1":
@@ -19,10 +19,10 @@ while True:
                 autenticado = validar_credenciais(email_login, senha_login, registro)
                 if autenticado :
                     menu_principal()
-        elif opcao == "X":
+        elif opcao == "3":
             break
         else:
-            print("OPÇÃO ESCOLHIDA É INVALIDA. ESCOLHA UMA OPÇÃO VÁLIDA!")
+            print("OPÇÃO ESCOLHIDA É INVALIDA. TENTE NOVAMENTE")
             continue
     except ValueError:
         print("SAINDO...")
